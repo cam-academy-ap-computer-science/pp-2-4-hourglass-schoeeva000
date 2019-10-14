@@ -44,7 +44,7 @@
 
 public class Hourglass {
 	
-	public static final int LINES = 1000000; // Change this constant to change the height of the hourglass.
+	public static final int LINES = 10; // Change this constant to change the height of the hourglass.
 										// Only goes up by 2, on the even numbers.
 										// it does this because if it went up on odd, the hourglass would not look like it 
 										// was intended to, (\/ in the center instead of \:/) and also would require an if statement
