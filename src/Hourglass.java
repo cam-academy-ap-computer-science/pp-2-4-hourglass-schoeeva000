@@ -47,7 +47,7 @@ public class Hourglass {
 	public static final int LINES = 10; // Change this constant to change the height of the hourglass.
 										// Only goes up by 2, on the even numbers.
 										// it does this because if it went up on odd, the hourglass would not look like it 
-										// was intended to, (\/ in the center instead of \:/) and also would require an if statement
+										// was intended to, and also would require an if statement
 	
 										// Don't worry, it still works!! :)
 	public static void main(String[] args) {
@@ -61,7 +61,7 @@ public class Hourglass {
 		int oddNumber = LINES % 2; //if LINES is odd, it makes oddNumber = 1 (see next comment)
 		
 		System.out.print("|");
-		for(int i = LINES - 2; i >= oddNumber; i--) { //basically makes the number of "s odd all the time, to fit with the rest of the hourglass
+		for(int i = LINES - 1; i >= oddNumber; i--) { //basically makes the number of "s odd all the time, to fit with the rest of the hourglass
 			System.out.print("\"");
 		}
 		System.out.println("|");
@@ -76,13 +76,17 @@ public class Hourglass {
 				System.out.print(" ");
 			}
 			System.out.print("\\"); //print a forward slash to begin the side of the hourglass
-			for(int k = (2*(linesForHalf-i))*2; k >= 0; k-=2) { //I don't have the brain big enough to track what's going on here, but it works!!
+			for(int k = (2*(linesForHalf-i + 1))*2; k >= 1; k-=2) { //I don't have the brain big enough to track what's going on here, but it works!!
 																//I did a lot of trial and error work with this
 				System.out.print(":");
 			}
 			System.out.println("/"); // end each line with the / side of the hourglass
 			
 		}
+		for (int i = 1; i <= linesForHalf + 1; i++) { // this for loop prints spaces for the middle section after printing the meat
+			System.out.print(" ");
+		}
+		System.out.println("||"); // prints the middle section
 	}
 	
 	public static void bottomMeat() { // 
@@ -94,7 +98,7 @@ public class Hourglass {
 				System.out.print(" ");
 			}
 			System.out.print("/");
-			for(int k = 0; k <= ((i * 2) - 2) * 2; k+=2) { //again, I don't have the grey matter nessesary to know what's going on here
+			for(int k = 0; k <= ((i * 2) - 1) * 2; k+=2) { //again, I don't have the grey matter nessesary to know what's going on here
 														   //it works, so please don't mark me down!
 				System.out.print(":");
 			}
