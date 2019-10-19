@@ -1,0 +1,24 @@
+
+Correct Output: 10/10 
+/* 
+   Here are the alternative approaches to topMeat and bottomMeat methods.
+   topMeat() method: 
+	 for (int k = 1; k <= -(i * 2) + LINES;k++)
+	 {
+	     System.out.print(":");
+	 }
+
+  bottomMeat() method:
+	for (int k = 1; k <= i * 2; k++)
+	{
+	    System.out.print(":");
+	}
+*/
+
+Proper Use of Static Methods: 3/3
+Proper Use of for loops: 3/3
+Pseudocode: 3/3
+Comments: 2/2 
+Consistent Layout and Style following Style Guidelines: 2/2
+Proper Use of at least one Class Constant: 2/2
+Extra Credit - Hourglass can be resized by changing only one Class Constant: 2/2
